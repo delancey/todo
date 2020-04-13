@@ -44,8 +44,8 @@ $(btn).click(function(){
 }); */
 
 
-//targeting the  unordered list
-//on click of a list item, remove that list item
+//targeting the unordered list
+//on click of a list item, add strikethrough to item then remove from list.
 //right now only removes one item from list
 
 $( 'ul').on( 'click', 'li', function(e) {
