@@ -48,10 +48,16 @@ $(btn).click(function(){
 //on click of a list item, remove that list item
 //right now only removes one item from list
 
-$( 'ul').on( 'click', 'li', function() {
-    $(this).remove();
-    alert("and it's gone!");
-   
+$( 'ul').on( 'click', 'li', function(e) {
+ 
+  let target = e.target;  //easy reference for the release function event
+  $(this).css('text-decoration', 'line-through');
+
+  function release(){ 
+    (target).remove();
+ };
+  setTimeout(release, 500);
+
 });
 
 

@@ -21,14 +21,18 @@ var addition = btn.addEventListener('click',function () {
    ul.appendChild(addItem);     // Append 
    //The text from the input value is cleared out
    input.value = "";
-   
 } )
 
-ul.addEventListener("click",function(e) {
+   ul.addEventListener("click",function(e) {
     var tgt = e.target;
-    if (tgt.tagName.toUpperCase() == "LI") {    
-      tgt.parentNode.removeChild(tgt); // or tgt.remove();
+    if (tgt.tagName.toUpperCase() == "LI") {   
+
+      tgt.style.textDecoration = "line-through";
+      function remove() {
+        tgt.remove(); // or tgt.parentNode.removeChild(tgt);
+      }
+      setTimeout(remove, 500);
+       
     }
-  });   
+  });  
     
-  
